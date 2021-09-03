@@ -114,13 +114,30 @@
   </header>
 
   <!-- main content of the page -->
-  <main></main>
+  <main>
+    <div class="viewport">
+      <div>
+        <h2>Prepare for takeoff.</h2>
+        <p>Sendinblue is the smartest and most intuitive platform for growing businesses.<br>
+          Thrive digitally as we guide your business with the right marketing & sales tools.</p>
+        <a href="free">Take a free test drive!</a>
+      </div>
+      <div id="frame">
+        
+      </div>
+    </div>
+  </main>
 
   <!-- footer of the page -->
   <footer></footer>
 
   <!-- script -->
   <script src="index.js"></script>
+  <script>
+    $(function () {
+        $("#frame").load("frame.html");
+    });
+</script>
 </body>
 
 </html>

@@ -5,6 +5,9 @@
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
+body {
+  margin-bottom: 100px;
+}
 
 h1,
 h2,
@@ -19,12 +22,16 @@ a {
   text-decoration: none;
 }
 
+/* active scrolling */
+.scrolling-active {
+  background-color: white;
+  box-shadow: 1px 3px 10px rgb(163, 158, 158);
+}
 /* header style */
 header {
   width: 100%;
   position: fixed;
   z-index: 5;
-  background-color: white;
 }
 .header-fixed-nav {
   width: 99%;
@@ -93,6 +100,55 @@ header {
   display: none;
 }
 
+/* main */
+.viewport {
+  width: 90%;
+  display: flex;
+  margin: auto;
+}
+.viewport > div:nth-child(1) {
+  width: 40%;
+  margin-right: auto;
+  padding-top: 230px;
+  padding-bottom: 160px;
+  padding-right: 85px;
+}
+.viewport > div:nth-child(1) h2 {
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 72px;
+  font-family: PublicoHeadline-Bold-Web;
+  color: #091e3f;
+}
+.viewport > div:nth-child(1) p {
+  margin: 40px 0px 60px;
+  padding-left: 30px;
+  border-left: 2px solid #ffd201;
+  font-size: 20px;
+  font-family: OpenSans-Regular;
+  line-height: 30px;
+}
+.viewport > div:nth-child(1) a {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 17px 30px;
+  border-radius: 30px;
+  color: #fff;
+  font-family: OpenSans-Bold;
+  background-color: #0092ff;
+  transition: all .25s ease;
+}
+.viewport > div:nth-child(1) a:hover {
+  background-color: #044a75;
+}
+.viewport > div:nth-child(2) {
+  width: 56%;
+  height: 120%;
+  position: absolute;
+  right: 0;
+}
+
 /* media queries */
 @media screen and (min-width: 1250px) {
   .header-fixed-nav {
@@ -107,7 +163,6 @@ header {
     margin-top: 0px;
     padding: 25px 20px 20px;
     line-height: 30px;
-    background-color: white;
     box-shadow: 1px 5px 10px rgb(238, 232, 232);
   }
   .menu > li:nth-child(1) .menu-drop-down {
