@@ -289,6 +289,7 @@ main > div {
     padding: 25px 20px 20px;
     line-height: 30px;
     box-shadow: 1px 5px 10px rgb(238, 232, 232);
+    background-color: white;
   }
   .menu > li:nth-child(1) .menu-drop-down {
     width: 250px;
