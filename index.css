@@ -14,8 +14,12 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  font-family: PublicoHeadline-Bold-Web;
+  color: #091e3f
+}
 p {
+  font-family: OpenSans-Regular,;
   color: #606469;
 }
 a {
@@ -52,7 +56,8 @@ header {
   margin-right: auto;
   margin-left: 5%;
 }
-.menu .menu-drop-down, .menu-bottom {
+.menu .menu-drop-down,
+.menu-bottom {
   display: none;
 }
 .menu li {
@@ -101,10 +106,12 @@ header {
 }
 
 /* main */
-.viewport {
+main > div {
   width: 90%;
-  display: flex;
   margin: auto;
+}
+.viewport {
+  display: flex;
 }
 .viewport > div:nth-child(1) {
   width: 40%;
@@ -117,15 +124,12 @@ header {
   font-size: 72px;
   font-weight: 400;
   line-height: 72px;
-  font-family: PublicoHeadline-Bold-Web;
-  color: #091e3f;
 }
 .viewport > div:nth-child(1) p {
   margin: 40px 0px 60px;
   padding-left: 30px;
   border-left: 2px solid #ffd201;
   font-size: 20px;
-  font-family: OpenSans-Regular;
   line-height: 30px;
 }
 .viewport > div:nth-child(1) a {
@@ -137,16 +141,132 @@ header {
   color: #fff;
   font-family: OpenSans-Bold;
   background-color: #0092ff;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 .viewport > div:nth-child(1) a:hover {
   background-color: #044a75;
 }
 .viewport > div:nth-child(2) {
-  width: 56%;
+  width: 60%;
   height: 120%;
   position: absolute;
   right: 0;
+  overflow: hidden;
+}
+.viewport > div:nth-child(2) iframe {
+  position: absolute;
+  top: -150px;
+  width: 1000px;
+  height: 1000px;
+}
+
+/* wrapper-before */
+.wrapper-before {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 100px;
+  margin-bottom: 50px;
+  background-color: #044a75;
+}
+.wrapper-div-text {
+  width: 25%;
+}
+.wrapper-div-text {
+  display: flex;
+  align-items: start;
+  line-height: 25px;
+}
+.wrapper-div-text div {
+  padding-left: 20px;
+}
+.wrapper-div-text img {
+  width: 20px;
+}
+.wrapper-div-text h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+.wrapper-div-text p {
+  font-size: 16px;
+  color: #FFFFFFCC;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  margin-top: -150px;
+  padding-top: 150px;
+  z-index: -1;
+  background: linear-gradient(
+    180deg
+    ,#EEECEB 0%,#FFFFFF 100%);
+}
+.absolute-img {
+  width: 180px;
+  margin: auto;
+  height: 100px;
+}
+.absolute-img img {
+  position: absolute;
+}
+.absolute-img img:nth-child(1) {
+  width: 45px;
+  margin-top: 10px;
+}
+.absolute-img img:nth-child(2) {
+  width: 80px;
+  margin-left: 50px;
+}
+.absolute-img img:nth-child(3) {
+  width: 90px;
+  margin-top: 50px;
+  margin-left: 90px;
+}
+.wrapper > div:nth-child(2) {
+  text-align: center;
+  margin-bottom: 100px;
+  padding: 40px 0px 0px;
+}
+.wrapper > div:nth-child(2) h2 {
+  font-size: 50px;
+}
+.wrapper > div:nth-child(2) p {
+  font-size: 20px;
+}
+
+.wrapper > div:nth-child(3) {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0px auto 60px;
+}
+.wrapper > div:nth-child(3) > div:nth-child(1) h2 {
+  width: 70%;
+  font-size: 32px;
+  text-align: right;
+}
+.wrapper > div:nth-child(3) > div:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+}
+.wrapper > div:nth-child(3) > div:nth-child(2) > .wrapper-div-text {
+  width: 40%;
+  margin: 20px;
+  cursor: pointer;
+}
+.wrapper > div:nth-child(3) > div:nth-child(2) > .wrapper-div-text img {
+  width: 30px;
+}
+.wrapper > div:nth-child(3) > div:nth-child(2) > .wrapper-div-text h3 {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #091e3f;
+}
+.wrapper > div:nth-child(3) > div:nth-child(2) > .wrapper-div-text p {
+  color: #606469;
 }
 
 /* media queries */
@@ -154,6 +274,11 @@ header {
   .header-fixed-nav {
     width: 90%;
     margin: auto;
+  }
+}
+@media screen and (max-width: 1230px) {
+  main > div:nth-child(2) {
+    width: 100%;
   }
 }
 @media screen and (min-width: 950px) {
@@ -174,7 +299,7 @@ header {
     width: 550px;
     margin-left: -240px;
     padding: 15px 30px 20px;
-  }  
+  }
   .menu > li:nth-child(4) .menu-drop-down {
     margin-left: -40px;
   }
@@ -183,7 +308,7 @@ header {
     color: #606469;
   }
   .menu h3 {
-    font-size: 15px; 
+    font-size: 15px;
     margin-bottom: 10px;
     color: #091e3f;
   }
@@ -218,7 +343,7 @@ header {
     height: 3.5px;
     border-radius: 2px;
     background-color: #000;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   .line:nth-child(1) {
     transform: translateY(-5px);
@@ -231,7 +356,7 @@ header {
   }
   .hamburger.open .line:nth-child(2) {
     transform: rotate(-45deg);
-  }  
+  }
   /*.header-fixed-nav ul.menu,*/
   .header-fixed-nav > div:nth-child(3) {
     display: none;
@@ -269,7 +394,8 @@ header {
   .menu li:nth-of-type(3) .menu-drop-down li {
     margin-bottom: 30px;
   }
-  .menu li:nth-of-type(3) .menu-drop-down li:nth-of-type(3), .menu li:nth-of-type(3) .menu-drop-down li:nth-of-type(2) {
+  .menu li:nth-of-type(3) .menu-drop-down li:nth-of-type(3),
+  .menu li:nth-of-type(3) .menu-drop-down li:nth-of-type(2) {
     margin-top: 30px;
   }
   .menu .hr {
@@ -282,7 +408,7 @@ header {
     font-size: 16px;
   }
   .menu h3 {
-    font-size: 18px; 
+    font-size: 18px;
     margin-bottom: 20px;
     color: #091e3f;
   }
@@ -297,5 +423,57 @@ header {
     font-size: 20px;
     font-weight: 600;
     color: #091e3f;
+  }
+}
+@media screen and (max-width: 950px) {
+  .viewport {
+    width: 95%;
+    margin-bottom: 55vh;
+  }
+  .viewport > div:nth-child(1) {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    padding-right: 0px;
+  }
+  .viewport > div:nth-child(1) h2 {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 45px;
+  }
+  .viewport > div:nth-child(2) iframe {
+    display: none;
+  }
+  .viewport > div:nth-child(2) {
+    width: 95%;
+    height: 100%;
+    background: url(https://www.sendinblue.com/wp-content/themes/sendinblue2019/assets/images/home/section-video/cover.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 70vh;
+    left: 5%;
+  }
+  .wrapper-before {
+    padding: 70px 50px;
+    flex-direction: column;
+  }
+  .wrapper-div-text {
+    width: 100%;
+    margin: 0px 0px 45px;
+  }
+  .wrapper > div:nth-child(3) {
+    width: 95%;
+    flex-direction: column;
+  }
+  .wrapper > div:nth-child(3) > div:nth-child(1) h2 {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  .wrapper > div:nth-child(3) > div:nth-child(2) {
+    flex-direction: column;
+    width: 100%;
+  }
+  .wrapper > div:nth-child(3) > div:nth-child(2) > .wrapper-div-text {
+    width: 100%;
   }
 }
