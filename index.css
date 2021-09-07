@@ -539,6 +539,21 @@ footer .horizontal-line {
   main > div:nth-child(2) {
     width: 100%;
   }
+  .wr2 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .wr3 {
+    width: 100%;
+    margin-top: 70vh;
+  }
+  .wr3 > div {
+    margin-left: 10%;
+  }
+  .wr4 {
+    margin-top: 160vh;
+  }
 }
 @media screen and (min-width: 950px) {
   .menu .menu-drop-down {
@@ -684,6 +699,9 @@ footer .horizontal-line {
     font-weight: 600;
     color: #091e3f;
   }
+  .wr3 {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 950px) {
   .viewport {
@@ -758,7 +776,27 @@ footer .horizontal-line {
   }
 }
 @media screen and (max-width: 750px) {
-  .footer-head, .footer-body, .footer-body .person, .footer-body .footer-links, .footer-bottom {
+  .wr2 .txt, .wr2 .image {
+    margin-left: 20px;
+    width: 100%;
+  }
+  .wr2 .image {
+    margin-left: 0px;
+  }
+  .wr3 {
+    margin-top: 110vh;
+  }
+  img[name="slide"] {
+    margin-top: 0px;
+    margin-left: 20%;
+  }
+  .wr4 {
+    margin-top: 280vh;
+  }
+  footer {
+    margin-top: 380vh;
+  }
+  .footer-head, .footer-body, .footer-body .person, .footer-body .footer-links, .footer-bottom, .wr2, .wr3, .wr4 {
     flex-direction: column;
   }
   .footer-head img, .footer-head .social-media {
