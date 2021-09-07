@@ -79,3 +79,23 @@ menuDropDown[2].addEventListener("mouseover", () => {
 menuDropDown[2].addEventListener("mouseout", () => {
   menuDropDown[2].style.display = "none";
 });
+
+
+// slideshow .wr3
+var images = ['https://www.sendinblue.com/wp-content/uploads/2020/03/Benedicte_Alpha_Full_Res@2x.png', 'https://www.sendinblue.com/wp-content/uploads/2020/03/Benjamin_Alpha_Full_Res@2x.png', 'https://www.sendinblue.com/wp-content/uploads/2020/03/Edwin_Aplha_Full_Res_B-@1x.png'];
+var color = ['#eeeceb', '#ffd201', '#ffd9d4'];
+var time = 5000;
+var imgs = 0;
+
+function changeImg() {
+  document.slide.src = images[imgs];
+  document.getElementsByClassName('wr3')[0].style.background = color[imgs];
+  if( imgs<images.length-1 ) {
+    imgs++;
+  }
+  else {
+    imgs=0;
+  }
+  setTimeout('changeImg()', time);
+}
+window.addEventListener('load', changeImg);
