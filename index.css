@@ -407,7 +407,7 @@ img[name="slide"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120%;
+  width: 100%;
   position: absolute;
   z-index: 1;
   left: 0;
