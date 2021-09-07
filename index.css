@@ -5,9 +5,6 @@
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
-body {
-  margin-bottom: 100px;
-}
 
 h1,
 h2,
@@ -197,7 +194,6 @@ main > div {
   position: relative;
   margin-top: -150px;
   padding-top: 150px;
-  padding-bottom: 100px;
   z-index: -1;
   background: linear-gradient(
     180deg
@@ -272,7 +268,7 @@ main > div {
 .wrapper > a {
   display: block;
   width: 150px;
-  margin: auto;
+  margin: 0px auto 100px;
   text-align: center;
   padding: 17px 30px;
   border-radius: 30px;
@@ -285,11 +281,132 @@ main > div {
   cursor: pointer;
   background-color: #044a75;
 }
-.wrapper .wrapper-line {
+.horizontal-line {
   width: 80%;
   height: 1px;
-  margin: 100px auto 0px;
+  margin: auto;
+  margin-bottom: 20px;
   background-color: rgb(231, 229, 225);
+}
+
+/* wrapper after */
+.wr1 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 70px;
+}
+.wr1 > div img {
+  width: 400px;
+}
+.wr1 > div:nth-child(2) {
+  width: 35%;
+  padding-top: 40px;
+}
+.wr1 > div:nth-child(2) img {
+  width: 80px;
+  margin: 20px 20px 20px 0px;
+}
+.wr1 h2 {
+  font-size: 50px;
+}
+.wr1 > div:nth-child(2) a {
+  color: #0092ff;
+}
+.wr1 > div:nth-child(2) a::before {
+  content: '>';
+  margin-right: 5px;
+}
+
+/* footer style */
+footer {
+  padding: 60px 0px 50px;
+}
+footer > div {
+  width: 90%;
+  margin: auto;
+}
+.footer-head {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+.footer-head > img[alt="sendinblue logo"] {
+  width: 250px;
+  margin-right: auto;
+}
+.footer-head .social-media img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-body {
+  display: flex;
+  margin: 50px 50px;
+}
+.footer-body .person {
+  display: flex;
+  width: 30%;
+}
+.footer-body .person img {
+  max-width: 130px;
+  max-height: 160px;
+}
+.footer-body .person > div {
+  width: 55%;
+  margin-left: 15px;
+}
+.footer-body .person > div p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+.footer-body .person > div a {
+  color: #0092ff;
+}
+.footer-body .person > div a::before {
+  content: '>';
+  margin-right: 5px;
+}
+.footer-body .footer-links {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-body .footer-links h3 {
+  font-size: 18px;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+.footer-body .footer-links ul li {
+  list-style-type: none;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #606469;
+}
+
+.footer-bottom {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+.footer-bottom .copyright {
+  font-size: 13px;
+  color: #606469;
+  margin-right: auto;
+}
+.footer-bottom div:nth-child(2) {
+  font-size: 14px;
+  color: #606469;
+}
+.footer-bottom a {
+  font-size: 14px;
+  color: #606469;
+}
+.footer-bottom a:hover {
+  color: rgb(158, 154, 154);
+}
+footer .horizontal-line {
+  width: 100%;
 }
 
 /* media queries */
@@ -503,7 +620,52 @@ main > div {
   .wrapper > a {
     width: 95%;
   }
-  .wrapper .wrapper-line {
+  .horizontal-line {
     width: 100%;
+  }
+  .wr1 {
+    text-align: center;
+    background-color: orange;
+    flex-direction: column;
+  }
+  .wr1 > div:nth-child(2) {
+    width: 100%;
+  }
+  .wr1 h2 {
+    font-size: 30px;
+  }
+  .footer-body .person img {
+    max-width: 60px;
+    max-height: 75px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .footer-head, .footer-body, .footer-body .person, .footer-body .footer-links, .footer-bottom {
+    flex-direction: column;
+  }
+  .footer-head img, .footer-head .social-media {
+    margin: 0px auto 15px;
+  }
+  .footer-body .person {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer-body .person img {
+    max-width: 130px;
+    max-height: 160px;
+    margin: auto;
+  }
+  .footer-body .person > div {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .footer-body .person > div p {
+    width: 100%;
+  }
+  .footer-body .footer-links > div {
+    margin-bottom: 30px;
+  }
+  .footer-bottom .copyright {
+    margin-bottom: 10px;
   }
 }
