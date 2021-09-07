@@ -197,6 +197,7 @@ main > div {
   position: relative;
   margin-top: -150px;
   padding-top: 150px;
+  padding-bottom: 100px;
   z-index: -1;
   background: linear-gradient(
     180deg
@@ -235,38 +236,60 @@ main > div {
   font-size: 20px;
 }
 
-.wrapper > div:nth-child(3) {
+.wrapper1 {
   width: 90%;
   display: flex;
   justify-content: space-around;
   margin: 0px auto 60px;
 }
-.wrapper > div:nth-child(3) > div:nth-child(1) h2 {
+.wrapper1 > div:nth-child(1) h2 {
   width: 70%;
   font-size: 32px;
   text-align: right;
 }
-.wrapper > div:nth-child(3) > div:nth-child(2) {
+.wrapper1 > div:nth-child(2) {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 80%;
 }
-.wrapper > div:nth-child(3) > div:nth-child(2) > .wrapper-div-text {
+.wrapper1 > div:nth-child(2) > .wrapper-div-text {
   width: 40%;
   margin: 20px;
   cursor: pointer;
 }
-.wrapper > div:nth-child(3) > div:nth-child(2) > .wrapper-div-text img {
+.wrapper1 > div:nth-child(2) > .wrapper-div-text img {
   width: 30px;
 }
-.wrapper > div:nth-child(3) > div:nth-child(2) > .wrapper-div-text h3 {
+.wrapper1 > div:nth-child(2) > .wrapper-div-text h3 {
   font-size: 18px;
   font-family: sans-serif;
   color: #091e3f;
 }
-.wrapper > div:nth-child(3) > div:nth-child(2) > .wrapper-div-text p {
+.wrapper1 > div:nth-child(2) > .wrapper-div-text p {
   color: #606469;
+}
+.wrapper > a {
+  display: block;
+  width: 150px;
+  margin: auto;
+  text-align: center;
+  padding: 17px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: #0092ff;
+  transition: all 0.5s ease-in-out;
+}
+.wrapper > a:hover {
+  cursor: pointer;
+  background-color: #044a75;
+}
+.wrapper .wrapper-line {
+  width: 80%;
+  height: 1px;
+  margin: 100px auto 0px;
+  background-color: rgb(231, 229, 225);
 }
 
 /* media queries */
@@ -462,19 +485,25 @@ main > div {
     width: 100%;
     margin: 0px 0px 45px;
   }
-  .wrapper > div:nth-child(3) {
+  .wrapper1 {
     width: 95%;
     flex-direction: column;
   }
-  .wrapper > div:nth-child(3) > div:nth-child(1) h2 {
+  .wrapper1 > div:nth-child(1) h2 {
     text-align: left;
     margin-bottom: 15px;
   }
-  .wrapper > div:nth-child(3) > div:nth-child(2) {
+  .wrapper1 > div:nth-child(2) {
     flex-direction: column;
     width: 100%;
   }
-  .wrapper > div:nth-child(3) > div:nth-child(2) > .wrapper-div-text {
+  .wrapper1 > div:nth-child(2) > .wrapper-div-text {
+    width: 100%;
+  }
+  .wrapper > a {
+    width: 95%;
+  }
+  .wrapper .wrapper-line {
     width: 100%;
   }
 }
